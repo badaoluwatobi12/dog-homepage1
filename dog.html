@@ -1,0 +1,132 @@
+<html>
+
+<body style="background-color:white">
+
+<form>
+  <input type="text" placeholder="Search.." name="search" size="50" height="500" >
+  <input type="button" name="submit" value="search"><i class="fa fa-search"></i></button>
+</form>
+<img src ="picture1.jpg" width="250" /><br/><br/><br/>
+
+
+<p>Fill options below</p>
+<form >
+	Lastname:
+	<input type="text" class="lastname" name="lastname" id="la" />
+    <style >
+    	.lastname{
+    		width: 30%;
+    		height: 5%;
+    		margin-left: 4.5%;
+    	}
+    </style>
+	<br/><br/>
+
+    Firstname:
+    <input type="text" name="firstname" class="firstname" id="fa" size="30" />
+      <style >
+    	.firstname{
+    		width: 30%;
+    		height: 5%;
+    		margin-left: 4.5%;
+
+    	}
+    </style>
+    <br/><br/>
+
+    Phone Number:
+    <input type="tel" id="phone" class="number" name="phone" value="(000) 000 0000" align="20" size="30" />
+    <style >
+    	.number{
+    		width: 30%;
+    		height: 5%;
+    	    text-indent: 5%;
+    	    margin-left: 24px;
+    	}
+    </style>
+
+    <br/><br/>
+
+    Email Address:
+    <input type="Email" id="email" class="email" name="email"><br/><br/>
+      <style >
+    	.email{
+    		width: 30%;
+    		height: 5%;
+    		margin-left:26px; 
+    	}
+    </style>
+
+      Age:
+    <input type="Age" name="Age" class="age" align="20" size="30"/><br/><br/><br/>
+      <style >
+    	.age{
+    		width: 10%;
+    		height: 5%;
+    		margin-left: 93px;
+    	}
+    </style>
+   
+    Gender:<br/><br/>
+    
+    Male
+	<input type="checkbox" name="male" />
+	
+	Female
+	<input type="checkbox"  name="female" ><br/><br/><br/>
+    
+   Birthday:
+    <input type="date" id="birthday" class="birthday" name="birthday"align="20" size="30" />
+      <style >
+    	.birthday{
+    		width: 15%;
+    		height: 8%;
+    		text-indent: 5%;
+    		margin-left: 60px;
+    	}
+    </style>
+    <br/><br/>
+    Description:<br/>
+    <textarea rows="10" class="description" cols="10">write whats on your mind</textarea>
+      <style >
+    	.description{
+    		width: 30%;
+    		height: 30%;
+    	}
+    </style>
+    <br/><br/>
+
+    <button type="button" class="block" onclick="sbmt()">SUBMIT</button>
+    
+    <style>  
+      .block {
+      display: block;
+      width: 50%;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align:center; 
+      height: 50; 
+      color: green;
+
+      } </style>
+    
+
+<script>function sbmt() {
+  
+
+     var arr = [];
+     var obj = {
+       lastname : la.value,
+       firstname : fa.value,
+     };
+      arr.push(obj);
+
+      var conv = JSON.stringify(arr);
+      localStorage.reg = conv
+    }
+</script>
+</body>
+
+</html>
